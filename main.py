@@ -64,7 +64,8 @@ def load_inner(driver, data):
             prod_data_arr.append(prod_data)
             #data['products'].push(prod_data)
             i+=1
-        data.setdefault('products',[]).append(prod_data_arr)
+        #data.setdefault('products',[]).append(prod_data_arr)
+        data['products'] = prod_data_arr
         #data['products'].extent(prod_data_arr)
         #data.products=prod_data_arr
     driver.execute_script("window.history.go(-1)")
